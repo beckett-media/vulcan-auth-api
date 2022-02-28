@@ -1,0 +1,27 @@
+### list all nfts
+GET http://localhost:3000/nfts
+
+### query fake nft status
+GET http://127.0.0.1:3000/nfts/0xA16402A42DBD4A59F630621F83EA823a94493295?id=1
+
+### query authentic nft status
+GET http://127.0.0.1:3000/nfts/0x691107c555266cC394ddEC6f132A35c3e149e84e?id=5
+
+
+### authenticate nft
+POST http://127.0.0.1:3000/nfts
+Content-Type: application/json
+
+{
+    "collection": "0x691107c555266cC394ddEC6f132A35c3e149e84e",
+    "id": 5
+}
+
+### revoke nft
+DELETE  http://127.0.0.1:3000/nfts
+Content-Type: application/json
+
+{
+    "collection": "0x691107c555266cC394ddEC6f132A35c3e149e84e",
+    "id": 5
+}
